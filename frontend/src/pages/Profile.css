@@ -1,0 +1,312 @@
+.profile-main {
+    margin-top: 48px;
+    margin-bottom: 80px;
+}
+
+.profile-header {
+    font-size: 2.25rem;
+    margin-bottom: 32px;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.profile-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
+}
+
+.p-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    background: #f1f5f9;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+}
+
+.p-info h3 {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.p-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Tab Styling */
+.orders-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.order-tabs {
+    display: flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 100px;
+}
+
+.tab-btn {
+    padding: 8px 20px;
+    border-radius: 100px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background: var(--white);
+    color: var(--text-main);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Orders Section */
+.orders-section {
+    margin-top: 64px;
+}
+
+.order-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-bottom: 32px;
+    overflow: hidden;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+}
+
+.order-header {
+    background: #f8fafc;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.order-meta {
+    display: flex;
+    gap: 48px;
+}
+
+.meta-item span {
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.meta-item strong {
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+.order-id {
+    text-align: right;
+}
+
+.order-id span {
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.order-id a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.order-body {
+    padding: 24px;
+    display: flex;
+    gap: 32px;
+}
+
+.order-items-list {
+    flex: 1;
+}
+
+.order-item-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.order-item-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.item-thumb img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    background: #f8fafc;
+}
+
+.status-flex {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.delivery-date {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.order-status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.order-status-badge[data-status="pending"] { background: #fef9c3; color: #854d0e; }
+.order-status-badge[data-status="confirmed"] { background: #dcfce7; color: #166534; }
+.order-status-badge[data-status="shipped"] { background: #dbeafe; color: #1e40af; }
+.order-status-badge[data-status="delivered"] { background: #f1f5f9; color: var(--text-muted); }
+.order-status-badge[data-status="cancelled"] { background: #fee2e2; color: #991b1b; }
+
+.item-name {
+    display: block;
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.item-meta {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 220px;
+}
+
+.action-sq {
+    width: 100% !important;
+    padding: 10px 16px !important;
+    font-size: 0.9rem !important;
+    border-radius: var(--radius-md) !important;
+    text-align: center;
+}
+
+.order-footer {
+    background: #f8fafc;
+    padding: 12px 24px;
+    border-top: 1px solid var(--border);
+}
+
+.order-footer a {
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.buy-again-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+.empty-orders {
+    text-align: center;
+    padding: 64px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--border);
+}
+
+/* Address Styling Improvements */
+.addresses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.address-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.2s;
+}
+
+.address-card:hover {
+    border-color: var(--border-hover);
+}
+
+.skeleton {
+    background: linear-gradient(110deg, #f1f5f9 8%, #f8fafc 18%, #f1f5f9 33%);
+    background-size: 200% 100%;
+    animation: 2s shine linear infinite;
+}
+
+@media (max-width: 768px) {
+    .order-body {
+        flex-direction: column;
+    }
+    .order-actions {
+        width: 100%;
+    }
+}
